@@ -58,5 +58,24 @@
 
 void DayOfWeek(int number)
 {
-
+    if (number > 0 && number < 8)
+    {
+        if (number == 6 || number == 7)
+        {   
+        Console.WriteLine($"Day {number} is holiday");   
+        }
+        else
+        {       
+        Console.WriteLine($"The day {number} isn't holiday. Go to work");        
+        }
+    }
+    else
+    {
+        Console.WriteLine("There is no such day");
+    }
+  
 }
+
+Console.Write("Input day: ");
+int day = Convert.ToInt32(Console.ReadLine());
+DayOfWeek(day);
